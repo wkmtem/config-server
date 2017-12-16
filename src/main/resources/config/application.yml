@@ -1,0 +1,12 @@
+server:
+  port: 6666
+spring:
+  application:
+    name: interview-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://
+          username:
+          password:
