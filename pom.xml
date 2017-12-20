@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>config-server</name>
+	<name>${project.artifactId}</name>
 	<description>Config-Server for Spring Boot</description>
 
 	<parent>
@@ -51,6 +51,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -58,6 +59,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>

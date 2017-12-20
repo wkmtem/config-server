@@ -1,21 +1,7 @@
-server:
-  port: 6666
 spring:
   application:
+    # 指定服务名称
     name: interview-config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: http://
-          username:
-          password:
 
-
-# 请求配置文件的规则如下：
-# /{application}/{profile}/[label]
-# /{application}-{profile}.yml
-# /{label}/{application}-{profile}.yml
-# /{application}-{profile}.properties
-# /{label}/{application}-{profile}.properties
-# 其中{label}是指分支，默认是master
+  profiles:
+    active: dev
