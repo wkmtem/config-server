@@ -12,10 +12,10 @@ spring:
           password:
 
 
-# \u8BF7\u6C42\u914D\u7F6E\u6587\u4EF6\u7684\u89C4\u5219\u5982\u4E0B\uFF1A
+# 请求配置文件的规则如下：
 # /{application}/{profile}/[label]
 # /{application}-{profile}.yml
 # /{label}/{application}-{profile}.yml
 # /{application}-{profile}.properties
 # /{label}/{application}-{profile}.properties
-# \u5176\u4E2D: {label}\u662F\u6307\u5206\u652F\uFF0C\u9ED8\u8BA4\u662Fmaster
+# 其中{label}是指分支，默认是master
