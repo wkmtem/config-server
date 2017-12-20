@@ -2,6 +2,7 @@ package com.nsntc.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * Create DateTime: 2017/12/16 上午8:46
  * Version: 1.0
  */
+@EnableDiscoveryClient
 @EnableConfigServer
 @SpringBootApplication
 public class ConfigServerApplication {

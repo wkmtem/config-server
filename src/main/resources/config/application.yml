@@ -4,4 +4,4 @@ spring:
     name: interview-config-server
 
   profiles:
-    active: dev
+    active: local
