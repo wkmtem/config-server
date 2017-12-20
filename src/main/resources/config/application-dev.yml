@@ -10,6 +10,15 @@ spring:
           username: wkm
           password: omega041108
 
+  # 消息总线(由Config-Server负责同步)
+  rabbitmq:
+    host: 139.196.195.162
+    # AMQP协议端口
+    port: 5672
+    # 超级管理员guest: guest
+    username: admin
+    password: admin
+
 # Eureka Client
 eureka:
   client:
@@ -29,6 +38,10 @@ eureka:
     # 指定实例id(${spring.cloud.client.ipAddress}:${server.port}或${spring.application.name}:${server.port},不推荐)
     #instance-id:
 
+management:
+  # actuator安全认证(用于暴露MQ的端点)
+  security:
+    enabled: false
 
 # 请求配置文件的规则如下:
 # /{application}/{profile}/[label]
@@ -45,3 +58,8 @@ eureka:
 # git commit -m "first commit"
 # git remote add origin https://github.com/wkmtem/interview-config.git
 # git push -u origin master
+
+# 配置git的webhook(web钩子)指向Spring Cloud Bus 消息总线
+# 1、请求方式: POST
+# 2、字符编码: application/x-www-form-urlencoded
+# 3、URL: http://config_server_ip:6789/bus/refresh
