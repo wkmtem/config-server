@@ -1,14 +1,14 @@
 server:
-  port: 6666
+  port: 6789
 
 spring:
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/wkmtem/interview-config.git
-          username: wkmtem
-          password: 19870925yjcsxdl
+          uri: http://gitlab.sh-tlj.com/examination/java/interview-config.git
+          username: wkm
+          password: omega041108
 
 
 # 请求配置文件的规则如下：
