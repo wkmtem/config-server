@@ -1,6 +1,5 @@
 spring:
   application:
-    # 指定服务名称
     name: interview-config-server
 
   profiles:

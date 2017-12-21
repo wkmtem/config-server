@@ -11,6 +11,15 @@ spring:
           username: ${gitUsername:wkm}
           password: ${gitPassword:omega041108}
 
+  # 消息总线(由Config-Server负责同步)
+  rabbitmq:
+    host: ${rabbitmqHost:139.196.195.162}
+    # AMQP协议端口
+    port: ${rabbitmqPort:5672}
+    # 超级管理员guest: guest
+    username: ${rabbitmqUsername:admin}
+    password: ${rabbitmqPassword:admin}
+
 # Eureka Client
 eureka:
   client:
@@ -21,14 +30,19 @@ eureka:
     # Eureka client 与 server 交互地址(已配置安全认证)
     service-url:
       # 集群时, 可指定一个, 也可指定多个(","隔开)
-      defaultZone: ${eurekaClientUrl:http://administrator:omega@127.0.0.1:7777/eureka/}
+      defaultZone: ${eurekaServerUrl:http://administrator:omega@127.0.0.1:7777/eureka/}
   instance:
     # 将ip注册到Eureka中
     prefer-ip-address: true
     # 指定本机ip通讯地址(无效, 待测)
-    ip-address: ${ipAddress:127.0.0.1}
+    ip-address: ${eurekaClientIp:127.0.0.1}
     # 指定实例id(${spring.cloud.client.ipAddress}:${server.port}或${spring.application.name}:${server.port},不推荐)
     #instance-id:
+
+management:
+  # actuator安全认证(用于暴露MQ的端点)
+  security:
+    enabled: false
 
 
 # 请求配置文件的规则如下:
