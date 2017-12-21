@@ -1,5 +1,5 @@
 server:
-  # 支持docker jvm参数
+  # 运行时, 指定参数, 通过入口函数: --port=?或JVM: -Dport=?传递
   port: ${port:6789}
 
 spring:
@@ -7,18 +7,18 @@ spring:
     config:
       server:
         git:
-          uri: http://gitlab.sh-tlj.com/examination/java/interview-config.git
-          username: wkm
-          password: omega041108
+          uri: ${gitUrl:http://gitlab.sh-tlj.com/examination/java/interview-config.git}
+          username: ${gitUsername:wkm}
+          password: ${gitPassword:omega041108}
 
   # 消息总线(由Config-Server负责同步)
   rabbitmq:
-    host: 139.196.195.162
+    host: ${rabbitmqHost:139.196.195.162}
     # AMQP协议端口
-    port: 5672
+    port: ${rabbitmqPort:5672}
     # 超级管理员guest: guest
-    username: admin
-    password: admin
+    username: ${rabbitmqUsername:admin}
+    password: ${rabbitmqPassword:admin}
 
 # Eureka Client
 eureka:
@@ -30,12 +30,12 @@ eureka:
     # Eureka client 与 server 交互地址(已配置安全认证)
     service-url:
       # 集群时, 可指定一个, 也可指定多个(","隔开)
-      defaultZone: http://administrator:omega@10.46.31.101:7777/eureka/
+      defaultZone: ${eurekaClientUrl:http://administrator:omega@10.46.31.101:7777/eureka/}
   instance:
     # 将ip注册到Eureka中
     prefer-ip-address: true
     # 指定本机ip通讯地址(无效, 待测)
-    ip-address: 10.46.31.101
+    ip-address: ${ipAddress:10.46.31.101}
     # 指定实例id(${spring.cloud.client.ipAddress}:${server.port}或${spring.application.name}:${server.port},不推荐)
     #instance-id:
 

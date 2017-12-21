@@ -20,5 +20,7 @@ public class ConfigServerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ConfigServerApplication.class, args);
+		/** 通过JVM: -Dport=?传递参数 */
+		//System.getProperty("port");
 	}
 }
