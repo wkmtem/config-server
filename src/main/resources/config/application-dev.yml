@@ -1,5 +1,6 @@
 server:
-  port: 6789
+  # 支持docker jvm参数
+  port: ${port:6789}
 
 spring:
   cloud:
