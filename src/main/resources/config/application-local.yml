@@ -1,6 +1,6 @@
 server:
   # 运行时, 指定参数, 通过入口函数: --port=?或JVM: -Dport=?传递
-  port: ${port:6789}
+  port: ${port:8000}
 
 spring:
   cloud:
@@ -60,3 +60,8 @@ management:
 # git commit -m "first commit"
 # git remote add origin https://github.com/wkmtem/interview-config.git
 # git push -u origin master
+
+# 配置git的webhook(web钩子)指向Spring Cloud Bus 消息总线
+# 1、请求方式: POST
+# 2、字符编码: application/x-www-form-urlencoded
+# 3、URL: http://config_server_ip:6789/bus/refresh

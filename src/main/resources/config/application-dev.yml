@@ -1,6 +1,6 @@
 server:
   # 运行时, 指定参数, 通过入口函数: --port=?或JVM: -Dport=?传递
-  port: ${port:6789}
+  port: ${port:8000}
 
 spring:
   cloud:
