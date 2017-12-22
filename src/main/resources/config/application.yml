@@ -4,3 +4,8 @@ spring:
 
   profiles:
     active: local
+
+management:
+  # actuator安全认证(用于暴露MQ的端点)
+  security:
+    enabled: false

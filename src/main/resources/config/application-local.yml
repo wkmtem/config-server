@@ -39,11 +39,6 @@ eureka:
     # 指定实例id(${spring.cloud.client.ipAddress}:${server.port}或${spring.application.name}:${server.port},不推荐)
     #instance-id:
 
-management:
-  # actuator安全认证(用于暴露MQ的端点)
-  security:
-    enabled: false
-
 
 # 请求配置文件的规则如下:
 # /{application}/{profile}/[label]
