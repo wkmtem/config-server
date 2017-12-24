@@ -18,7 +18,7 @@ spring:
     port: ${rabbitmqPort:5672}
     # 超级管理员guest: guest
     username: ${rabbitmqUsername:admin}
-    password: ${rabbitmqPassword:admin}
+    password: ${rabbitmqPassword:omega}
 
 # Eureka Client
 eureka:
@@ -34,7 +34,7 @@ eureka:
   instance:
     # 将ip注册到Eureka中
     prefer-ip-address: true
-    # 指定本机ip通讯地址(无效, 待测)
+    # 指定本机ip通讯地址
     ip-address: ${eurekaClientIp:10.46.31.101}
     # 指定实例id(${spring.cloud.client.ipAddress}:${server.port}或${spring.application.name}:${server.port},不推荐)
     #instance-id:
