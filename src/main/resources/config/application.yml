@@ -3,7 +3,7 @@ spring:
     name: interview-config-server
 
   profiles:
-    active: ubuntu
+    active: dev
 
 management:
   # actuator安全认证(用于暴露MQ的端点)
