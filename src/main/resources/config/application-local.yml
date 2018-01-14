@@ -13,7 +13,7 @@ spring:
 
   # 消息总线(由Config-Server负责同步)
   rabbitmq:
-    host: ${rabbitmqHost:insterview.nsntc.com}
+    host: ${rabbitmqHost:interview.nsntc.com}
     # AMQP协议端口
     port: ${rabbitmqPort:5672}
     # 超级管理员guest: guest
