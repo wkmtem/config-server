@@ -13,11 +13,11 @@ spring:
 
   # 消息总线(由Config-Server负责同步)
   rabbitmq:
-    host: ${rabbitmqHost:139.196.195.162}
+    host: ${rabbitmqHost:interview.nsntc.com}
     # AMQP协议端口
     port: ${rabbitmqPort:5672}
     # 超级管理员guest: guest
-    username: ${rabbitmqUsername:admin}
+    username: ${rabbitmqUsername:administrator}
     password: ${rabbitmqPassword:omega}
 
 # Eureka Client
@@ -30,12 +30,12 @@ eureka:
     # Eureka client 与 server 交互地址(已配置安全认证)
     service-url:
       # 集群时, 可指定一个, 也可指定多个(","隔开)
-      defaultZone: ${eurekaServerUrl:http://administrator:omega@10.46.31.101:7777/eureka/}
+      defaultZone: ${eurekaServerUrl:http://administrator:omega@172.19.245.110:7777/eureka/}
   instance:
     # 将ip注册到Eureka中
     prefer-ip-address: true
     # 指定本机ip通讯地址
-    ip-address: ${eurekaClientIp:10.46.31.101}
+    ip-address: ${eurekaClientIp:172.19.245.110}
     # 指定实例id(${spring.cloud.client.ipAddress}:${server.port}或${spring.application.name}:${server.port},不推荐)
     #instance-id:
 

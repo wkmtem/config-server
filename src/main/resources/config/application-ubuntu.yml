@@ -13,11 +13,11 @@ spring:
 
   # 消息总线(由Config-Server负责同步)
   rabbitmq:
-    host: ${rabbitmqHost:139.196.195.162}
+    host: ${rabbitmqHost:interview.nsntc.com}
     # AMQP协议端口
     port: ${rabbitmqPort:5672}
     # 超级管理员guest: guest
-    username: ${rabbitmqUsername:admin}
+    username: ${rabbitmqUsername:administrator}
     password: ${rabbitmqPassword:omega}
 
 # Eureka Client
