@@ -8,8 +8,8 @@ spring:
       server:
         git:
           uri: ${gitUrl:http://gitlab.sh-tlj.com/examination/java/interview-config.git}
-          username: ${gitUsername:wkm}
-          password: ${gitPassword:omega041108}
+          username: ${gitUsername:public_ic}
+          password: ${gitPassword:Aa123456}
 
   # 消息总线(由Config-Server负责同步)
   rabbitmq:
